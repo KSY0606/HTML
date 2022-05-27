@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 관련 태그들</title>
+</head>
+<body>
+    <form>
+        <h3>좋아하는 종목은?(다수 선택 가능)</h3>
+        <p>
+            <input type="checkbox" name="sport1" value="football">축구  <!--checkbox는 각각 선택하는거라 다중선택 가능하다-->
+            <input type="checkbox" name="sport2" value="baseball">야구
+            <input type="checkbox" name="sport3" value="volleyball">배구
+        </p>
+        <h3>수강과목(1과목만 선택가능)</h3>
+        <p>
+            <label><input type="radio" name="subject" value="eng">영어회화</label>     <!--radio는 name이 같아야함  그럼 다중선택이 안되고 1개만 선택가능해짐-->
+            <label><input type="radio" name="subject" value="ch">중국어회화</label>     <!-- label은 글씨를 눌러고 버튼체크가 가능해짐-->
+            <label><input type="radio" name="subject" value="jp" checked>일본어회화</label>     <!--checked는 선택하지않아도 기본적으로 체크가 되어있음-->
+        </p>
+    </form>
+
+</body>
+</html>

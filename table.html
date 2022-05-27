@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표 태그</title>
+</head>
+<body>
+    <figure>
+        <figcaption>
+            <p>비상연락망</p>
+        </figcaption>
+        <table border="1">
+            <tr> <!--tr은 하나의 행을 말함-->
+                <th>성명</th><th>전화번호</th><th>주소</th>
+            </tr>
+            <tr>
+                <td>김철수</td><td>010-1234-5678</td><td>서울시 중구</td>
+            </tr>
+            <tr>
+                <td>김영희</td><td>010-7777-7777</td><td>서울시 영등포구</td>
+            </tr>
+            <tr>
+                <td>홍길동</td><td>010-1111-1111</td><td>서울시 용산구</td>
+            </tr>
+            <tr>
+                <td>박찬호</td><td>010-3333-7890</td><td>서울시 용산구</td>
+            </tr>
+            <!-- colspan 열합치기    rowspan  행합치기-->
+        </table>
+    </figure>
+    <br>
+    <table border="1">
+        <caption> <!-- 표 제목 달기-->
+            <strong>주간 식단표</strong>
+        </caption>
+        <!-- thead, tbody, tfoot 잘 안쓰지만 접근성과 관련있다.-->
+        <thead> <!-- 표 내부 제목-->
+            <tr><th>시간</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>비고</th></tr>
+        </thead> <!-- 표 본문 내용-->
+        <tbody>
+            <tr>
+                <td>아침</td><td>김치찌개</td><td>비빔밥</td><td>김치찌개</td><td>된장찌개</td><td>부대찌개</td><td rowspan="3">시간엄수</td>
+            </tr>
+            <tr>
+                <td>점심</td><td>칼국수</td><td colspan="3">라면</td><td rowspan="2">제육볶음</td>
+            </tr>
+            <tr>
+                <td>저녁</td><td>순대국</td><td>콩나물국</td><td>칼국수</td><td>비빔밥</td>
+            </tr>
+        </tbody>
+        <tfoot> <!--요약-->
+            <tr>
+                <td colspan="7">*배식 시간은 12시부터 1시입니다.</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
