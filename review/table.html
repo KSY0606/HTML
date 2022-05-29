@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표만들기 태그</title>
+</head>
+<body>
+    <h1>표만들기 기본</h1>
+    <table border="1">
+        <tr>
+            <td>A</td><td>B</td>
+        </tr>
+        <tr>
+            <td>C</td><td>D</td>
+        </tr>
+    </table>
+
+    <h1>표만들기 열병합</h1>
+    <table border="1">
+        <tr>
+            <td colspan="2">A</td>
+        </tr>
+        <tr>
+            <td>B</td><td>C</td>
+        </tr>
+    </table>
+
+    <h1>표만들기 행병합</h1>
+    <table border="1">
+        <tr>
+            <td rowspan="2">A</td><td>B</td>
+        </tr>
+        <tr>
+            <td>C</td>
+        </tr>
+    </table>
+
+    <table border="1">
+        <caption>
+            <h1>표의 제목</h1>
+        </caption>
+
+        <colgroup>
+        <col span="2" class="col1">
+        <col class="col2">
+        <col span="2" class="col3">
+        </colgroup>
+        
+        <thead>
+            <tr>
+                <th>Table Header</th><th>Table Header</th><th>Table Header</th><th>Table Header</th><th>Table Header</th>
+            </tr>
+            <td></td>
+        </thead>
+    </table>
+</body>
+</html>
