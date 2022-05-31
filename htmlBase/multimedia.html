@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>멀티미디어</title> <!-- 음악이나 동영상을 보는것-->
+</head>
+<body>
+    <!--<audio src="images/da.mp3" controls autoplay></audio> --- 웹접근성 때문에 autoplay는 최근버전의 인터넷으로는 실행되지 않음-->
+    <audio controls>
+        <source src="images/da.mp3" type="audio/mp3">
+        <source src="images/da.ogg" type="audio/ogg">
+    </audio>
+    <br>
+    <!--<video src="images/cross.mp4" controls></video>
+    -->
+    <!-- <video controls autoplay muted width="500" height="400"> muted는 음소거상태로 만듬. muted를 붙여주면 음소거상태로 autoplay가 실행됨 width height로 크기 설정가능-->
+        <video controls poster="images/Penguins.jpg" width="500" height="400">
+        <source src="images/cross.mp4" type="video/mp4">
+        <source src="images/cross.webm" type="video/webm">
+        <source src="images/cross.ogv" type="video/ogv">
+        <track src="cross.vtt" srclang="ko" label="korean">
+    </video>
+</body>
+</html>
