@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자</title>
+    <style>
+       /* 1. 태그 선택자
+       p {
+            color: blue;
+        }
+          2. 아이디 선택자
+        #btext {
+            color: blue;
+        }
+        #back {
+            background-color: yellow;
+        }
+          3. 클래스 선택자
+        .target {
+            color: red;
+        }
+        .bc {
+            border: 1px solid blue;
+        }
+          4. 전체 선택자
+        * {
+            color: red;
+        }
+          5. 그룹 선택자
+        h2, p {
+            color: blue;
+        }
+        */
+    </style>
+</head>
+<body>
+    <h2 class="target">css 선택자 수업</h2>
+    <p>프론트엔드 수업 시작</p>
+    <p id="btext">html 수업 - 홈페이지 뼈대</p>
+    <p id="back">css 수업 - 디자인, 레이아웃 등</p>
+    <ul>
+        <li>페이지 구상</li>
+        <li class="target bc">와이어프레임</li> <!-- target bc 처럼 중간에 띄어주면 class를 2개 중첩시켜 사용가능함-->
+        <li class="bc">html 제작</li>
+        <li>css 작업</li>
+    </ul>
+</body>
+</html>
+
+<!-- 선택자
+    1. 태그 선택자 
+    2. 아이디 선택자    id를 부여하고 #을 써서 호출함. 중복 불가능!
+    3. 클래스 선택자    ex) class="target" class="bc"처럼 여러번 중복 사용 가능함 .을 써줘서 호출함
+    4. 전체 선택자      *를 붙여서 호출함
+    5. 그룹 선택자      h2, p {} 처럼 태그 2개를 같이 써줄 수 있음   #btext, #back{}처럼 아이디 2개를 묶어서도 사용가능함
+    -->
