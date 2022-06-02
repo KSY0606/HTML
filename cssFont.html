@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글꼴 관련 스타일</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+        @font-face {
+            font-family: trana;
+            src: url("font/trana.eot"),
+            url("font/trana.woff") format("woff"),
+            url("font/trana.ttf") format("truetype");
+        }
+        h1 {
+            /* font-family: "맑은 고딕",돋움,굴림;  글꼴을 2개 이상 적는걸 후보글꼴이라고 함. 첫 글꼴이 없을 경우 2번째 글꼴이 적용됨 */
+            font-family: trana, 굴림;
+        }
+        h2 {
+            font-family: 'Nanum Pen Script', cursive;
+        }
+    </style>
+</head>
+<body>
+    <h1>CORONA</h1>
+    <h2>css 선택자 수업</h2>
+    <p>프론트엔드 수업 시작</p>
+    <p>html 수업 - 홈페이지 뼈대</p>
+    <p>css 수업 - 디자인, 레이아웃 등</p>
+    <ul>
+        <li>페이지 구상</li>
+        <li>와이어프레임</li>
+        <li>html 제작</li>
+        <li>css 작업</li>
+    </ul>
+    <p>코로나 떠나시오!!!</p>
+</body>
+</html>

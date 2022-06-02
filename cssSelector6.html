@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>형제선택자</title>
+    <style>
+        input[type=checkbox]:checked + div {
+            height: 0px;
+        }
+        div {
+            width: 300px;
+            height: 500px;
+            overflow: hidden;
+            border: 1px solid blue;
+            transition: 3s;
+        }
+    </style>
+</head>
+<body>
+    <h1>오늘의 뉴스</h1>
+    뉴스감추기<input type="checkbox">
+    <div>
+        <h2>스포츠 뉴스</h2>
+        <p>파울루 벤투 감독이 이끄는 대한민국 축구 국가대표팀이 2일 오후 8시 서울월드컵경기장에서 브라질과 친선경기를 갖는다. </p>
+        <p>브라질과는 지난 2019년 11월 UAE 두바이에서 맞대결을 가진 뒤 3년 만의 맞대결이며 서울에선 지난 2013년 이후 9년 만의 홈 맞대결이다. 한국은 직전 두 경기 모두 패했다. </p>
+    </div>
+</body>
+</html>

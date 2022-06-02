@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자 관련 속성</title>
+    <style>
+        p {
+            font-weight: normal; /* bold 굵기 */
+            line-height: 2; /* 줄간격 */
+        }
+        h2 {
+            font-weight: normal; 
+        }
+        .target {
+            font-style: italic;
+        }
+        address {
+            font-style: normal;
+        }
+        .var {
+            font-variant: small-caps;
+        }
+        h1 {
+            font: 20px/1.6 "궁서"; /* font : [font-weight, font-style, font-variant] [font-size/line-height] [font-family] */
+        }                               /* 3가지 순서에 맞춰 써야하며 글자크기와 글꼴은 생략 불가능하다 */
+    </style>
+</head>
+<body>
+    <h1>글자와 관련된 속성들</h1>
+    <h2>css 선택자 수업</h2>
+    <p>홈페이지 제작순서</p>
+    <ul>
+        <li>페이지 구상</li>
+        <li class="target">와이어프레임</li>
+        <li><span class="var">html</span> 제작</li>
+        <li>css 작업</li>
+    </ul>
+    <address>서울시 종로구 </address> <!-- 애초에 기울어져있음 -->
+    <p>그랜드파크’ 집주인들은 되레 세입자를 구하지 못해 골머리를 앓고 있다. 전세보증금을 받아</p>
+    <p>31일 국토교통부 실거래가 공개 시스템에 따르면 구의동 e편한세상광진그랜드파크 전용면적 115㎡ 전세는 최근 10억원에 거래됐다. </p>
+</body>
+</html>
