@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상클래스 선택자(링크선택자)</title>
+    <!--  a:link >> 방문하지않은 링크의 스타일 
+            a:visited >> 방문한 링크의 스타일 
+            a:hover >> 마우스를 올려놨을때의 스타일
+            a:active >> 활성화했을때 
+        ★  a:focus >> 웹요소에 포커스가 맞춰졌을때 스타일
+                위 선택자를 사용할 경우 작성순서를 지켜야 함-->
+   <style>
+       a:link {
+           color: green;
+       }
+       a:visited {
+           color: brown;
+       }
+        a:hover{
+            color: red;
+        }
+        a:active {
+            color: yellow;
+        }
+        a:focus {
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">COMPANY</a></li>
+        <li><a href="#">PRODUCT</a></li>
+        <li><a href="#">SERVICE</a></li>
+        <li><a href="#">CUSTOMER</a></li>
+    </ul>
+    <a href="#">대한민국</a>
+</body>
+</html>

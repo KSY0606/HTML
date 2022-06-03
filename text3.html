@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자와 관련된 속성들</title>
+    <style>
+        p {
+            border: 1px solid;
+            width: 800px;
+            white-space: nowrap; /* 기본은 normal로 설정됨. nowrap은 줄바꿈없이 웹에 쭉~ 나옴 */
+            overflow: hidden; /* 800 영역을 벗어나는건 감춤 */
+            text-overflow: ellipsis; /* 영역을 벗어난 글은 ...로 처리됨   white-space, overflow, text-overflow 이 3개는 같이 써야 효과가 나타남*/
+            word-spacing: 0.5em; /* 단어와 단어 사이의 간격 */
+        }
+        h1 {
+            letter-spacing: 0.5em; /* 글자와 글자 간격 = 자간 */
+        }
+    </style>
+</head>
+<body>
+    <p>브라질은 국제축구연맹(FIFA) 랭킹 1위 강호다. '제2 펠레' 네이마르를 비롯해 히샬리송, 비니시우스 주니오르, 가브리엘 제수스 등 스타 선수들이 즐비한 최강의 팀이다.  한국은 브라질의 기세를 넘지 못하고 1대5 패배를 기록했다.</p>
+    <h1>대한민국</h1>
+</body>
+</html>
