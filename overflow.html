@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            width: 500px;
+            height: 100px;
+            border: 1px solid;
+            margin-bottom: 100px;
+            /*overflow: auto;  글자가 박스를 넘어갈 경우 스크롤바가 생기고 안넘어가는 경우는 생기지 않음 */
+            overflow-x: scroll;
+            /* opacity: 0.5;  글자에도 투명도가 가능하다 */
+        }
+        img {
+            opacity: 0.5; /* 투명도 */
+            transition: all 3s; /*서서히 환해짐 */
+        }
+        img:hover {
+            opacity: 1; /* 마우스를 가져다대면 환해짐 */
+        }
+    </style>
+</head>
+<body>
+    <h2>오늘의 뉴스</h2>
+    <p>지난 4월 코로나19로 인한 사회적 거리두기가 해제되면서 우리 국민의 여행과 교통 관련 카드 소비액이 급증한 것으로 나타났습니다.</p>
+    <p>여신금융협회에 따르면 사회적 거리두기가 해제된 지난 4월 전체 카드 승인액은 90조3천억 원으로, 코로나19가 대유행하던 1년 전 같은 달보다 11.0% 증가했습니다.고용 알선, 인력 공급업이나 여행사, 여행 보조 서비스업을 의미하는 사업시설관리 및 사업지원 서비스업은 40.4% 늘었습니다.숙박과 음식점업은 22.9%, 예술·스포츠, 여가 관련 서비스업은 22.0% 증가한 것으로 나타났습니다.</p>
+    <img src="images/Penguins.jpg" alt="펭귄" width="300px">
+</body>
+</html>

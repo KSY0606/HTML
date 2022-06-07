@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소 선택자</title>
+    <style>
+        table {
+            width: 200px;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 10px;
+        }
+        table tr:nth-child(2n+1) { /* 2n+1 (홀수)만 해당 */
+            background-color: red;
+        }
+        table tr:nth-child(2n) { /* 2*n (짝수)만 해당 */
+            background-color: aqua;
+        }
+        p::before { /* 태그 앞에 붙임 */
+            content: "여름"; /*내용*/
+            color: red;
+        }
+        p::after {
+            content: "- 7월,8월";
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h2>건강에 좋은 건강식품</h2>
+    <table border="1">
+        <tr><td>블루베리</td></tr>
+        <tr><td>귀리</td></tr>
+        <tr><td>토마토</td></tr>
+        <tr><td>시금치</td></tr>
+        <tr><td>적포도주</td></tr>
+        <tr><td>견과류</td></tr>
+        <tr><td>브로콜리</td></tr>
+        <tr><td>연어</td></tr>
+        <tr><td>마늘</td></tr>
+        <tr><td>녹차</td></tr>
+    </table>
+    <p>감기 조심하세요</p>
+</body>
+</html>

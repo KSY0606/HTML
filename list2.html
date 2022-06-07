@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>목록스타일</title>
+    <style>
+        #navi {
+            overflow: hidden;
+        }
+        #navi > li {
+            list-style: none; /* 불릿기호를 감춤 */
+            float: left; /* 아래정렬되지않고 왼쪽으로 정렬됨 */
+            background-color: orange;
+            padding: 15px; /* 안쪽 여백 */
+        }
+        #navi > li:hover {
+            background-color: yellow;
+        }
+        a {
+            text-decoration: none;
+        }
+        ol {
+            list-style-type: decimal-leading-zero; /* ol순번 앞에 0이 붙는다 */
+            list-style-position: outside; /*list-style-position은 ul에서도 사용 가능 */
+        }
+        p::selection { /* 글자 드래그해서 블럭잡을때 배경,글자색 변경해줌 */
+            color: blue;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <ul id="navi">
+        <li><a href="#">회사소개</a></li>
+        <li>제품소개</li>
+        <li>커뮤니티</li>
+        <li>자료실</li>
+        <li>찾아오시는길</li>
+    </ul>
+    <h2>프론트엔트</h2>
+    <ol>
+        <li>html</li>
+        <li>css</li>
+        <li>javascript</li>
+        <li>jquery</li>
+        <li>nodejs</li>
+        <li>react</li>
+    </ol>
+    <p>윤 대통령은 이와 함께 민가로 전투기 추락을 막고자 조종간을 잡은 채 순직한 고 심정민 소령을 포함한 순국 영웅들의 이름을 일일이 거론했습니다.</p>
+</body>
+</html>

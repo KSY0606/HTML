@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+    <style>
+       /* p {  블럭을 인라인으로 변경해줌 
+            display: inline;
+        }*/
+        #navi li {
+            list-style-type: none;
+            display: inline-block;
+        }
+        #navi a {
+            display: inline-block;
+            background-color: aquamarine;
+            color: brown;
+            width: 120px;
+            height: 35px;
+            text-align: center;
+            text-decoration: none;
+            line-height: 35px;
+        }
+        #navi a:hover {
+            text-decoration: underline;
+            background-color: red;
+        }
+        .hi {
+            background-color: bisque;
+            padding: 10px;
+            height: 100px;
+        }
+        .valign1 {
+            line-height: 100px; /* 본문이 1줄일 경우의 줄간격(=위아래 높이 가운데로 맞출때) */
+        }
+        .valign2 {
+            vertical-align: middle;
+        }
+        .valign3 {
+            display: table-cell; /* 여러줄 줄간격(line-height)를 쓸 수 없어서 이런 방식으로 위아래 높이를 맞춰줌 */
+            vertical-align: middle;
+        }
+        .hid {
+            border: 1px solid;
+            padding: 10px;
+            margin: 10px;
+        }
+        #box {
+            visibility: hidden; /* 페이지에서 가려짐 */
+        }
+    </style>
+</head>
+<body>
+    <ul id="navi">
+        <li><a href="#">회사소개</a></li>
+        <li><a href="#">제품소개</a></li>
+        <li><a href="#">커뮤니티</a></li>
+        <li><a href="#">자료실</a></li>
+        <li><a href="#">찾아오시는길</a></li>
+    </ul>
+    <p class="valign1 hi">지방선거</p>
+    <p class="valign2 hi">대선에 이어 지방선거까지 승리한 국민의힘은 이준석 대표가 내놓은 공천 혁신위원회를 두고 당내 갈등이 본격화하고 있습니다.지방선거 패배 '책임론'에 침묵하던 이재명 의원은 오늘 국회에 첫 출근을 했는데, 당권 도전여부에 즉답을 피했습니다. 엄윤주 기자!</p>
+    <p class="valign3 hi">대선에 이어 지방선거까지 승리한 국민의힘은 이준석 대표가 내놓은 공천 혁신위원회를 두고 당내 갈등이 본격화하고 있습니다.지방선거 패배 '책임론'에 침묵하던 이재명 의원은 오늘 국회에 첫 출근을 했는데, 당권 도전여부에 즉답을 피했습니다. 엄윤주 기자!</p>
+    <div id="box" class="hid">
+        <p>오늘은 화요일</p>
+        <p>css속성 배우는중...1</p>
+    </div>
+    <div id="box2" class="hid">
+        <p>오늘은 화요일</p>
+        <p>css속성 배우는중...2</p>
+    </div>
+   </body>
+</html>
