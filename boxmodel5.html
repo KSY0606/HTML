@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스모델</title>
+    <style>
+        .round {
+            width: 300px;
+            height: 200px;
+            display: inline-block;
+            border: 2px solid red;
+            margin: 20px;
+            /*border-radius: 20px;  모서리를 둥글게 해줌    border-radius: 20px 10px; 도 가능*/
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;  /* 따로따로 지정해서 둥글게 할 수도 있다. */
+        }
+        #bg {
+            background: url(images/girl.jpg) no-repeat;
+            background-size: cover;
+        }
+        .radius {
+            display: inline-block;
+            text-align: center;
+            line-height: 100px;
+            height: 100px;
+        }
+        .radius1 {
+            width: 100px;
+            background-color: #c60;
+            border-radius: 50%; /* 50% 나 100px를 설정하면 원이 됨 */
+        }
+        .radius2 {
+            width: 200px;
+            background-color: #090;
+            border-radius: 100px 100px 0 0;
+        }
+        .radius3 {
+            width: 100px;
+            background-color: #06c;
+            border-radius: 200px 0 0 0;
+        }
+        .radius4 {
+            width: 200px;
+            background-color: #99a;
+            border-radius: 40px 15px;
+            border: 4px dotted #808;
+        }
+        .area {
+            width: 500px;
+            height: 200px;
+            border: 1px solid;
+            background-color: blue;
+            /* border-top-left-radius: 10px;  왼쪽 상단만 둥글어짐*/
+            /*border-top-left-radius: 10px 30px;  이상한 모양 , 꼭지점의 가로10 세로30으로 둥글어짐*/
+            border-radius: 30px 80px / 80px 30px; /* 이상한 모양2 */
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="round"></div>
+    <div class="round" id="bg"></div>
+    <div>
+        <div class="radius radius1">
+            HTML5
+        </div>
+        <div class="radius radius2">
+            CSS3
+        </div>
+        <div class="radius radius3">
+            JavaScript
+        </div>
+        <div class="radius radius4">
+            jQuery
+        </div>
+    </div>
+    <div class="area"></div>
+</body>
+</html>

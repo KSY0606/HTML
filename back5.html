@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경색과 이미지</title>
+    <style>
+        #target {
+            width: 600px;
+            height: 400px;
+            border: 1px solid;
+           /* background: url(images/송해.jpg) no-repeat 0 0,          ,로 이어서 여러 사진 사용 가능 
+                        url(images/형돈.jpg) no-repeat 100% 0,
+                        url(images/호동.jpg) no-repeat 0 100%,
+                        url(images/웃는사람.png) no-repeat 100% 100%,
+                        url(images/x.jpg) no-repeat 50% 50%; */
+            background-image: url(images/1.png);
+            background-clip: content-box; /* 이미지가 잘려보이게 됨 */
+            background-origin: content-box; /* 배경이미지가 시작하는 시점   origin을 사용해주면 clip의 이미지 잘림이 해결됨*/
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2>영역배경</h2>
+    <div id="target">
+        <p>대통령실과 국가안보실은 윤석열 대통령님을 중심으로 NSC가 위주가 되어서 북한의 어떠한 도발에도 대응할 만반의 준비를 갖추고 있습니다. 북한 핵, 미사일 위협은 점차 고도화되고 있습니다.</p>
+    </div>
+</body>
+</html>

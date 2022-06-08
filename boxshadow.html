@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스 그림자</title>
+    <style>
+        .area {
+            width: 200px;
+            height: 100px;
+            display: inline-block;
+            margin: 15px;
+            border: 2px solid;
+            border-radius: 20px;
+        }
+        .box1 { 
+            box-shadow: 5px 5px 5px gray; /* 가로 세로 번짐 색상 */ 
+        }
+        .box2 {
+            box-shadow: 2px -2px 5px 0px rgba(0,0,0, 0.5); /* 가로 세로(마이너스는 위로 번짐) 흐림 번짐*/
+        }
+    </style>
+</head>
+<body>
+    <div class="area box1"></div>
+    <div class="area box2"></div>
+</body>
+</html>
