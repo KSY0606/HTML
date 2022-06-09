@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변형(transform)</title>
+    <style>
+       /* img {
+            width: 250px;
+            height: 240px;
+            margin: 100px;
+            overflow: hidden;
+            transition: transform 1s;
+        }
+        img:hover {
+            transform: scale(1.2,1.2);
+        }*/
+        #box {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+        }
+        #box img {
+            height:100%;
+            width: 100%;
+            object-fit:cover;     /* ? */
+            transition: 1s;
+        }
+        #box img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+    <img src="images/girl.jpg" alt="">
+    </div>
+</body>
+</html>

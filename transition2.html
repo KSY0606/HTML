@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전환(transition)효과</title>
+    <style>
+        .menu {
+            list-style: none;
+        }
+        .menu a {
+            display: block;
+            width: 300px;
+            height: 20px;
+            padding: 10px;
+            margin-bottom: 5px;
+            text-decoration: none;
+            background-color: #abc;
+            color: white;
+            transition: width 1s, color 1s;
+        }
+        .menu a:hover {
+            width: 450px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h3>움직이는 메뉴</h3>
+    <ul class="menu">
+        <li><a href="#">회사소개</a></li>
+        <li><a href="#">제품소개</a></li>
+        <li><a href="#">서비스</a></li>
+        <li><a href="#">커뮤니티</a></li>
+        <li><a href="#">자료실</a></li>
+    </ul>
+</body>
+</html>
