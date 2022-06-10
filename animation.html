@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <style>
+        @keyframes shape {
+            from {
+                background-color: blue;
+                border: 1px solid blue;
+            }
+            to {
+                background-color: red;
+                border: 1px solid blue;
+                border-radius: 50%;
+            }
+        }
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(90deg);
+            }
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin-bottom: 20px;
+        }
+        #box1 {
+            /*animation-name: shape;
+            animation-duration: 3s;
+            animation-direction: alternate;  alternate는 역순 
+            animation-iteration-count: 3;  실행 횟수 ,  숫자 대신 infinite를 적어주면 무한반복 
+            animation-timing-function: ease-in;
+            animation: shape 3s alternate infinite ease-in;    name, duration은 꼭 입력해줘야한다 */
+            animation: shape 2s infinite, rotate 3s alternate infinite; /* , 로 이어서 애니메이션2개를 설정 가능하다 */
+        }
+        #box2 {
+            animation-name: rotate;
+            animation-duration: 3s;
+            animation-delay: 2s; /* n초 뒤 실행됨(지연시킴) */
+        }
+        #box1:hover {
+            animation-play-state: paused; /* 마우스를 가져다대면 일시정지*/
+        }
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+</body>
+</html>
+<!-- @keyframes정의하고 animation 속성과 animation하위 속성을 이용해서 지정-->
+
+
+<!--animation-name: change-bc; /* keyframe 의 변수?*/
+animation-duration: 3s; /*실행시간*/-->

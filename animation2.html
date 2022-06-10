@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            animation-name: bg;
+            animation-duration: 4s;
+            /* animation-fill-mode: forwards;  애니메이션 수행후 처음으로 돌아가지않고 마지막 장면에 머물러있음 */
+        }
+        @keyframes bg {
+            0% {
+                background-color: blue;
+            }
+            25% {
+                background-color: green;
+            }
+            50% {
+                background-color: red;
+                transform: translate(30px,20px);
+            }
+            100% {
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>
