@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변형함수</title>
+    <style>
+        img {
+            transition: transform 1s;
+        }
+        img:hover {
+            /* transform: rotate(720deg); 2d (각도)입력 시계 방향    -를 붙이면 반시계방향으로 돌아감   ex -> (-45deg) */
+            /* transform: rotate3d(2.5,1.2,-1.5,45deg);  3d  (x축,y축,z축,각도) */
+            /* transform: skew(20deg,30deg); 비틀기 */
+            transform: matrix(1,-0.1,0,1,0,0); /* (scaleX,skewY,skewX,scaleY,translateX,translateY) 한번에 적용가능*/
+        }
+    </style>
+</head>
+<body>
+    <img src="images/girl.jpg" alt="">
+</body>
+</html>
