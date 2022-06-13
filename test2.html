@@ -6,62 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>과제</title>
     <style>
-        #wrapper {
-            width: 500px;
-            height: 500px;
-            background: #aed6e4;
+        .dog-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
-        #frame {
-            width: 400px;
-            height: 400px;
-            background: #fff;
-            box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+        .dog-list li {
+            float: left;
+            margin: 10px;
             position: relative;
-            top: 50px;
-            left: 50px;
+            overflow: hidden;
         }
-        .img-wrapper {
-            width: 195px;
-            height: 195px;
+        .dog-list li img {
+            width: 300px;
+            height: 250px;
+        }
+        .dog-list .caption {
             position: absolute;
-            cursor: pointer;
+            top: 250px;
+            width: 300px;
+            height: 250px;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: all 0.3s;
         }
-        .img-wrapper img {
-            box-shadow: 0 1px 10px rgba(0,0,0,0.4);
-            width: inherit;
-            height: inherit;
+        .dog-list h3, .dog-list p {
+            line-height: 50px;
+            text-align: center;
+            color: white;
         }
-        img1 {
-            top: 2px;
-            left: 2px;
-        }
-        img2 {
-            top: 2px;
-            left: 202px;
-        }
-        img3 {
-            top: 202px;
-            left: 2px;
-        }
-        img4 {
-            top: 202px;
-            left: 202   px;
-        }
+    .dog-list li:hover .caption {
+        opacity: 1;
+        transform: translateY(-250px);
+    }
     </style>
 </head>
 <body>
-    <div id="wrapper">
-        <div id="frame">
-            <div class="img-wrapper img1">
+    <h2>애완견 종류</h2>
+    <div id="container">
+        <ul class="dog-list">
+            <li>
                 <img src="images/dog1.jpg" alt="">
-            </div>
-            <div class="img-wrapper img2">
-                <img  src="images/dog2.jpg" alt="">
-            </div>
-            <div class="img-wrapper img3">
+                <div class="caption">
+                    <h3>푸들</h3>
+                    <p>나이: 14살</p>
+                    <p>특징: 조용함,영리함</p>
+                </div>
+            </li>
+            <li>
+                <img src="images/dog2.jpg" alt="">
+                <div class="caption">
+                    <h3>말티즈</h3>
+                    <p>나이: 12살</p>
+                    <p>특징: 시끄러움,활기참</p>
+                </div>
+            </li>
+            <li>
                 <img src="images/dog3.jpg" alt="">
-            </div>
-        </div>
+                <div class="caption">
+                    <h3>치와와</h3>
+                    <p>나이: 10살</p>
+                    <p>특징: 겁이 많음</p>
+                </div>
+            </li>
+        </ul>
     </div>
 </body>
 </html>
