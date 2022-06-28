@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문과 continue</title>
+    <script>
+        var nums = [26, 42, 15, 36, 78, 17, 85, 22, 62, 33];
+        var sum = 0;
+        for(var i = 0; i < nums.length; i++) {
+            if(nums[i] % 2 != 0) {
+                continue;
+            }
+            sum += nums[i];
+        }
+        document.write("짝수들의 합 = " + sum + "<br>");
+
+        var fruits = ["포도", "사과", "자두", "참외"];
+        /*for(var i = 0; i < fruits.length; i++) {
+            document.write(fruits[i] + "<br>");
+        }*/
+        for(var i in fruits) {  /* 인덱스 값을 전달해줌   배열과 같은 결과값이 나오게 됨*/
+            document.write(fruits[i] + "<br>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

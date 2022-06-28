@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 구현</title>
+    <style>
+        #pet {
+            width: 500px;
+            border: 1px solid #ccc;
+            margin: auto;
+            padding: 15px;
+            position: relative
+        }
+        button {
+            border: 1px solid #ccc;
+            padding: 5px;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+        .over {
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+        }
+        .detail {
+            width: 400px;
+            line-height: 1.8;
+            display: none;
+        }
+        #pet img {
+            width: 300px;
+        }
+    </style>
+    <script>
+        window.onload = function() {  /* 익명함수 */
+            var dsec = document.querySelector("#desc");
+            var op = document.querySelector("#op");
+            var sp = document.querySelector("#shep");
+
+            sp.onmouseover = function() {
+                sp.style.border = "5px solid black";
+                sp.style.transition = "border 1s";
+            }
+            sp.onmouseout = function() {
+                sp.style.border = "none";
+            }
+        }
+        function showDetail() {  /* 선언적 함수 */
+            desc.style.display = "block";
+            op.style.display = "none";
+        }
+        function hideDetail() {
+            desc.style.display = "none";
+            op.style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <div id="pet">
+        <img src="images/dog1.jpg" alt="" id="shep">
+        <button class="over" id="op" onclick="showDetail();">상세설명보기</button>
+        <div id="desc" class="detail">
+            <h3>poodle</h3>
+            <p>훈련성으로 평가되는 개 지능이 탑3 안에 들 정도로 뛰어나다. 때문에 훈련이 매우 용이하다. 훈련만 잘 시키면 다른 품종의 애완견보다 몇 배는 더 많은 개인기를 훈련시킬 수 있다.</p>
+            <button class="close" onclick="hideDetail();">상세설명닫기</button>
+        </div>
+    </div>
+</body>
+</html>
