@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+    <script>
+        var student = {}; /* 빈 객체 생성 */
+        student.이름 = "홍길동";        /* 동적으로 객체 생성 */
+        student.취미 = "악기";
+        student.특기 = "프로그래밍";
+        student.장래희망 = "풀스택개발자";
+        student.toString = function() {  /* function() 익명함수 */
+            var output = "";
+            for(var key in this) {             /* this 말고 student를 써줘도 됨 */
+                if(key != "toString") {
+                    output += key + " : " + this[key] + "<br>";
+                }
+            }
+            return output;
+        };
+        document.write(student.toString());
+        delete(student.장래희망);  /* 속성제거 */
+        document.write(student);   /* 장래희망이 빠진 student객체가 출력됨 */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

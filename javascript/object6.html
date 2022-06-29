@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 배열화</title>
+    <script>
+        var students = [];  /* 빈 배열 생성 */
+        students.push({이름 : "홍길동", 국어 : 90, 수학 : 80, 영어 : 70, 과학 : 79});
+        students.push({이름 : "김철수", 국어 : 70, 수학 : 60, 영어 : 90, 과학 : 77});
+        students.push({이름 : "이영희", 국어 : 60, 수학 : 96, 영어 : 80, 과학 : 82});
+        students.push({이름 : "이영표", 국어 : 88, 수학 : 77, 영어 : 70, 과학 : 60});
+        students.push({이름 : "박지성", 국어 : 50, 수학 : 72, 영어 : 75, 과학 : 50});
+        for(var i in students){
+            students[i].getSum = function () {
+                return this.국어 + this.수학 + this.영어 + this.과학;
+            }
+            students[i].getAvg = function() {
+                return this.getSum() / 4;
+            }
+        }
+        document.write("<h2>3학년 1반 성적표</h2>");
+        document.write("<p>이름&nbsp;&nbsp;&nbsp; 국어 수학 영어 과학 총점 평균</p>"); /* &nbsp; 는 띄어쓰기 */
+            for(var i in students) {
+                with(students[i]) {
+                    document.write(이름 + " " + 국어 + " " + 수학 + " " + 영어 + " " + 과학 + " " + getSum() + " " + getAvg() + "<br>");
+                }
+            }
+      /*alert(students[0].이름)   홍길동의 이름 출력 
+        alert(students[1].영어)   김철수의 영어점수 출력 */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
