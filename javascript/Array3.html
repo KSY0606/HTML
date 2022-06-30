@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 객체</title>
+    <script>
+        var fruit1 = ["바나나", "사과", "수박", "자두"];
+        var fruit2 = ["메론", "포도", "감귤"];
+        // 배열을 연결하는 concat()함수 
+        var fruits = fruit1.concat(fruit2);
+        console.log(fruits);
+        //배열을 하나의 문자열로 만들어주는 join
+        var result = fruit1.join("-");
+        alert(result);
+        fruit1.push("복숭아", "망고");
+        alert(fruit1[4]);   // fruit1에 push한 복숭아[4]   망고[5]가 출력됨 
+        fruit2.unshift("배"); //배옆의 맨 앞에 추가해주는 함수 => unshift 
+        alert(fruit2[0]);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
