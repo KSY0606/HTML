@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성자 함수, 메서드</title>
+    <script>
+        function Student(name, kor, mat, eng, sci) {  // 생성자
+            this.name = name;
+            this.kor = kor;
+            this.mat = mat;
+            this.eng = eng;
+            this.sci = sci;   /* 이 방법을 많이 씀  */
+            
+            //메서드
+            this.getSum = function() {
+                return this.kor + this. mat + this.eng + this.sci;
+            };
+            this.getAvg = function() {
+                return this.getSum() / 4;
+            }
+            this.toString = function() {
+                return this.name + " " + this.getSum() + " " + this.getAvg();
+            }
+        }
+            //인스턴스 객체 생성
+            /*var student1 = new Student("홍길동", 90, 85, 96, 70);
+            var student2 = new Student("김철수", 80, 50, 90, 60);*/
+            var students = [];
+            students.push(new Student("홍길동", 90, 85, 96, 70));
+            students.push(new Student("김철수", 80, 50, 90, 60));
+            students.push(new Student("이영희", 70, 55, 60, 90));
+            document.write("이름 총점 평균<br>");
+            for(var i in students) {
+                document.write(students[i].toString() + "<br>");
+            }
+
+            /*var willreturn = {   생성자
+            name:name,
+            kor:kor,
+            mat:mat,
+            eng:eng,
+            sci:sci
+            };
+            return willreturn;       이런방법도 있음.*/
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
