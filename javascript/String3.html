@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String 객체 문제</title>
+    <script>
+        var tel = prompt("당신의 연락처는?");
+        /*var str = tel.slice(0,9);
+        var result = str.concat("****");*/
+
+        var result = tel.substring(0,tel.length-4) + "****";
+        document.write(result);
+
+        
+        var email = prompt("이메일 주소는?");
+        var check = false;
+        if(email.indexOf("@") > 0) {
+            check = true;
+        }
+        if(check) {
+            alert("당신의 이메일 주소는 " + email + "이군요");
+        }else {
+            alert("이메일 형식이 잘못되었습니다.");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

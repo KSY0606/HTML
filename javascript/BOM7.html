@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>브라우저 객체 모델문제</title>
+    <script>
+        var t = window.open("file:///C:/webproject/html/javascript/time.html", "알림창", "width=300, height=300"); // (주소, 창의 이름, 창 크기);
+        t.moveTo(500,200);
+        if(!t){
+            alert("팝업 차단을 해제해주세요.");
+        }
+    </script>
+</head>
+<body>
+    <h1>길동이의 홈페이지</h1>
+</body>
+</html>

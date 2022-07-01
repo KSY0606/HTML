@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>브라우저 객체 모델</title>
+    <script>
+        // moveTo(x,y)  윈도우의 위치를 절대적으로 이동  
+        // moveBy(x,y)  윈도우의 위치를 상대적으로 이동
+        // resizeTo(x,y) 윈도우의 크기를 절대적으로 지정
+        // resizeBy(x,y) 윈도우의 크기를 상대적으로 지정
+
+        var child = window.open("", "", "width=600 height=300");
+        var width = screen.width;
+        var height = screen.height;
+        child.resizeTo(width, height);
+        child.moveTo(0,0)   
+        setInterval(function() {    // setInterval(함수, 밀리초);
+            child.moveBy(10,10);
+            child.resizeBy(-20, -20);
+        }, 1000);
+        if(child) {
+            child.document.write("<h2>공지사항</h2>");
+            child.document.write("<p>주말 잘 보내세요</p>");
+            child.document.write("<p>월요일부터 문서객체모델(DOM)을 시작합니다.</p>");
+            child.document.write("<p>월요일부터 개인홈페이지 교습을 시작합니다.</p>");
+        }else {
+            alert("팝업 차단을 해제해주세요.");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
