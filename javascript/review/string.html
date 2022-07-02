@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String 내장객체</title>
+    <script>
+        /*var str = new String("대한민국");
+        var ch = str.charAt(1);
+        alert(ch); // 인덱스1의 문자 출력*/
+
+        var str1 = "you good luck";
+        //var pos = str1.indexOf("good");
+        
+        /*var pos = str1.indexOf("you", 10);
+        alert(pos);*/
+        /*var pos = str1.indexOf("luck", 1);
+        alert(pos);*/
+        /*var pos4 = str1.lastIndexOf("luck"); // 뒤에서부터 you를 찾지만 인덱스 번호는 앞에서부터 센 값이 나온다.
+        alert(pos4);*/
+        
+        var ma = str1.match("good");
+        alert(ma);
+
+        var str2 = "지금은 html 공부중";
+        var str3 = str2.replace("html", "javascript");  // () 안의 앞에 문자가 바꿀 문자   뒤에 문자가 새로운 문자
+        alert(str3);
+
+        var pos6 = str1.search("you");
+        alert(pos6);  // indexOf와 같음,  문자가 있는 인덱스위치번호를 출력해줌
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var child = window.open("", "", "width=600 height=300"); // 600 300크기의 창 생성
+        /*var width = screen.width;
+        var height = screen.height;
+        child.resizeTo(width, height); // 창의 크기 조절 width, height만큼*/
+        child.moveTo(200,200);
+        setInterval(function() {    // setInterval(함수, 밀리초);
+            child.moveBy(10,10); // x,y만큼 계속 이동, 1초마다
+            child.resizeBy(-20, -20); // -20씩 창의 크기가 줄어듦.
+        }, 1000);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
