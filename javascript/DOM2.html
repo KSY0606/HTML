@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체모델(DOM)-생성2</title>
+    <script>
+        window.onload = function() {
+            document.body.innerHTML += "안녕하세요";
+            var output = "";
+            output += "<ul>";
+            output += "<li>자바스크립트(DOM)</li>";
+            output += "<li>라이브러리(jQuery)</li>";
+            output += "<li>Ajax</li>";
+            output += "</ul>";
+            document.body.innerHTML += output;
+        }
+    </script>
+</head>
+<body>
+    <h1>길동이의 홈페이지</h1>
+</body>
+</html>
