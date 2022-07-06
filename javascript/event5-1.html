@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <script>
+        window.onload = function() {
+            var userId = document.querySelector("#id");
+            var pw1 = document.querySelector("#pass");
+            var pw2 = document.querySelector("#passCheck");
+            userId.onchange = checkId;
+            pw1.onchange = checkPw;
+            pw2.onchange = comparePw;
+
+            // 아이디 자리수 체크
+            function checkId() {
+                if(userId.value.length < 4 || userId.value.length > 15 ) {
+                    alert("4~15자리의 영문과 숫자를 사용하세요.");
+                }
+            }
+            //비밀번호 자리수 체크
+            function checkPw() {
+                if(pw1.value.length < 8){
+                    alert("비밀번호는 8자리 이상이어야합니다.");
+                    pw1.value = "";
+                    pw1.focus();
+                }
+            }
+            //비밀번호, 비밀번호 확인
+            function comparePw() {
+                if(pw1.value != pw2.value) {
+                    alert("비밀번호가 다릅니다. 다시 입력하세요");
+                    pw2.value = "";
+                    pw2.focus();
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="member.jsp" method="post" id="myForm">
+        <p>
+            <label for="id">아이디</label>
+            <input type="text" id="id" name="id" required placeholder="4~15자리의 영문과 숫자로 입력">
+        </p>
+        <p>
+            <label for="pass">비밀번호</label>
+            <input type="password" id="pass" name="pass" placeholder="8자리 이상">
+        </p>
+        <p>
+            <label for="passCheck">비밀번호 확인</label>
+            <input type="password" id="passCheck" name="passCheck">
+        </p>
+        <input type="submit" value="회원가입">
+    </form>
+</body>
+</html>
