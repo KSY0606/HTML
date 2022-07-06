@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 필터선택자</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+           /* $("li:gt(3)").css("color", "red"); // 첫번째는 배열처럼 0부터 시작됨 , 3보다 큰 값 전부 해당됨 */
+           /* $("li:lt(3)").css("color", "blue"); // 3보다 작은 값들 */
+           /* $("li:eq(3)").css("color", "green"); // eq = equal  3번째거라는 뜻 */
+           $("tr:eq(0)").css({
+            background : "#000",
+            color : "#fff"
+            }); // 메서드가 css로 동일할 경우 메서드체이닝말고 14~17라인처럼 사용 가능하다.
+           $("td:nth-child(3n+1)").css("background", "#cef279");
+           $("td:nth-child(3n+2)").css("background", "#ffb2d9");
+           $("td:nth-child(3n)").css("background", "#b2ebf4");
+           // $("h1").click(함수)  h1을 클릭했을때 변경되게끔  아래 22~24처럼 할 수 있음
+           $("h1").click(function() {
+            $(this).css("color", "red").html("코로나 박멸!");
+           })
+        });
+    </script>
+</head>
+<body>
+    <h1>코로나 유행</h1>
+    <h2>동물의 세계</h2>
+    <ul>
+        <li>사자</li>
+        <li>코끼리</li>
+        <li>표범</li>
+        <li>거북이</li>
+        <li>기린</li>
+        <li>사슴</li>
+        <li>악어</li>
+    </ul>
+    <h2>혈액형 조사</h2>
+    <table>
+        <tr><th>이름</th><th>혈액형</th><th>지역</th></tr>
+        <tr><td>김철수</td><td>O형</td><td>서울시 용산구</td></tr>
+        <tr><td>이영희</td><td>A형</td><td>서울시 중구</td></tr>
+        <tr><td>홍길동</td><td>AB형</td><td>서울시 종로구</td></tr>
+        <tr><td>박찬호</td><td>B형</td><td>서울시 강남구</td></tr>
+        <tr><td>이영표</td><td>A형</td><td>서울시 영등포구</td></tr>
+        <tr><td>손흥민</td><td>O형</td><td>서울시 노원구</td></tr>
+    </table>
+</body>
+</html>

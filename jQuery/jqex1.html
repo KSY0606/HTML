@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        /*$(document).ready(function() {       //  (document).ready를 생략가능(13라인처럼 사용 가능)
+
+        });*/
+        $(function() { // window.onload와 같음
+            //$("h1").click(익명함수);
+            $("h1").click(function(){
+                $(this).css("color", "red");  // this는 내가 클릭하는 문장(22,23라인 중 하나)
+                $(this).html("코로나 퇴치완료!!");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>서울 코로나 바이러스</h1>
+    <h1>경기 코로나 바이러스</h1>
+</body>
+</html>
