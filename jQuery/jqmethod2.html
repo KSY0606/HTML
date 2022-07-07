@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            /*$("h1").css("background", "orange");
+            $("h1:even").css("color", "white");
+            $("h1:odd").css("color", "red");*/
+            $("h1").css("background", "orange").filter(":even").css("color", "white").end().filter(":odd").css("color", "red");
+                    // even filter를 거쳐 선택된 값들의 odd를 filter 하게 되므로 end를 사용해주면 11~13처럼 같은 값 나옴/ end는 한단계 뒤로 돌아감
+       });
+    </script>
+</head>
+<body>
+    <h1>제이쿼리 선택자</h1>
+    <h1>제이쿼리 메서드</h1>
+    <h1>제이쿼리 이벤트</h1>
+    <h1>제이쿼리 애니메이션</h1>
+    <h1>제이쿼리 플러그인</h1>
+    <h1>제이쿼리 실무응용</h1>
+</body>
+</html>

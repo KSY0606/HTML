@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            /*var work = document.querySelector("#head");
+            work.onclick = function() {
+                work.innerHTML = "지금 배우는중...";
+            }; */
+            /*$("h1").click(function() {
+                $(this).html("지금 배우는중..");
+            });*/
+            var cotext = ["5200명 발생", "2300명 발생", "6800명 발생", "1200명 발생", "3300명 발생"];
+            $("h1").click(function() {
+                var i = $(this).index();
+                $(this).html(cotext[i]);
+            });
+            
+            /*$("h1").html(function(index){
+                return cotext[index];
+            });*/
+        });
+    </script>
+</head>
+<body>
+    <h1>서울현황</h1>
+    <h1>경기현황</h1>
+    <h1>인천현황</h1>
+    <h1>강원현황</h1>
+    <h1>부산현황</h1>
+</body>
+</html>
+
+<!--  메서드
+        1. 일반 메서드 - 인덱스를 가짐
+        2. 이벤트 메서드 - 동작 (클릭, 호버, 키다운, 더블클릭)  - 이벤트를 가짐
+    -->

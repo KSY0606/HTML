@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리</title>
+    <style>
+        .high_light {
+            background: yellow;
+            color: red;
+            border: 3px solid blue;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            // $(선택자).hover(함수, 함수); // 마우스를 올리면 앞의 함수가 실행  마우스를 떼면 뒤의 함수가 실행됨  를 아래처럼 작성
+            $("h1").hover(function() {
+                $(this).addClass("high_light");
+            }, function() {
+                $(this).removeClass("high_light");
+            });
+            // $("h1").addClass("high_light");  // h1 전부 다 적용됨
+        });
+    </script>
+</head>
+<body>
+    <h1>제이쿼리 선택자</h1>
+    <h1>제이쿼리 메서드</h1>
+    <h1>제이쿼리 이벤트</h1>
+    <h1>제이쿼리 애니메이션</h1>
+    <h1>제이쿼리 플러그인</h1>
+</body>
+</html>
