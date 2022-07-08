@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    
+    <script>
+        $(function(){
+            /*var pic = [{
+                src : images/box2.png,
+                src : images/lightbulb.png,
+                src : images/웃는사람.png}];     내가 한거, 못품.
+
+            for(var i = 0; i < 3; i++){
+                $("img").eq(i).hover(function() {
+                    $(this).attr(pic[i]);
+                });
+            };*/
+
+            var oldimage = ["box1.png", "lightbulb1.png", "우는사람.png"];
+            var newimage = ["box2.png", "lightbulb.png", "웃는사람.png"];
+            var index;
+            $("img").hover(function() {
+                index = $(this).index();
+                $(this).attr("src", "images/" + newimage[index]);
+            }, function() {
+                $(this).attr("src", "images/" + oldimage[index]);
+            });
+
+/*
+            $("img").eq(0).hover(function() {
+                $(this).attr("src", "images/box2.png");
+            }, function() {
+                $(this).attr("src", "images/box1.png");
+            });
+            $("img").eq(1).hover(function() {
+                $(this).attr("src", "images/lightbulb.png");
+            }, function() {
+                $(this).attr("src", "images/lightbulb1.png");
+            });
+            $("img").eq(2).hover(function() {
+                $(this).attr("src", "images/웃는사람.png");
+            }, function() {
+                $(this).attr("src", "images/우는사람.png");
+            });*/
+        });
+    </script>
+</head>
+<body>
+    <img src="images/box1.png" alt="">
+    <img src="images/lightbulb1.png" alt="">
+    <img src="images/우는사람.png" alt="">
+</body>
+</html>

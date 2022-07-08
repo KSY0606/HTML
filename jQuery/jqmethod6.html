@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    
+    <script>
+        // $(선택자).attr(속성이름); => 속성값을 가져옴.     14,15라인
+        // $(선택자).attr(속성이름,속성값); => 해당 속성값으로 변경됨.  17라인
+        $(function(){
+            /*var src = $("img").attr("src");
+            alert(src);*/
+
+            // $("img").attr("width", 200);
+            /*$("img").attr({
+                width : 200,
+                height : 100
+            }); 를 아래처럼 height100 고정에 width만 각각 설정 할 수 있다*/
+            $("img").attr({
+                width : function(index) {
+                    return (index+1) * 100;
+                },
+                height : 100
+            });
+        });
+    </script>
+</head>
+<body>
+    <img src="images/Koala.jpg" alt="">
+    <img src="images/Penguins.jpg" alt="">
+    <img src="images/Lighthouse.jpg" alt="">
+</body>
+</html>

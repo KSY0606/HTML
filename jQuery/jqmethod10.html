@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+       $(function() {
+           /* var c = $("h1").css("color");
+            alert(c); */
+            
+            //$("h1").css("color", "red");
+            
+            
+            var color = ["red", "green", "blue"];
+            /*for(var i = 0; i <3; i++) {
+                $("h1").eq(i).css("color",  color[i]);
+            }
+                    위 아래 서로 같음
+            $("h1").eq(0).css("color", "red");
+            $("h1").eq(1).css("color", "green");
+            $("h1").eq(2).css("color", "blue");
+            
+            $("h1").css("color",function(index) {
+                return color[index];
+            }); */
+
+            $("h1").css({
+                color : function(index) {
+                    return color[index];
+                },
+                backgroundColor : "yellow"
+            });
+            // $(선택자).html(); 처럼 아무것도 안쓰면 속성값을 가져옴
+            // $(선택자).html(내용);은 내용을 변경함
+            /* var h = $("h1").html();
+            alert(h); */
+            $("h1").click(function() {
+                $(this).html("배우는 중..");
+            });
+            // $("#box").html("<h1>오늘은 금요일</h1>");
+            $("#box").text("<h1>오늘은 금요일</h1>");
+        });
+    </script>
+</head>
+<body>
+    <h1>제이쿼리 선택자</h1>
+    <h1>제이쿼리 메서드</h1>
+    <h1>제이쿼리 이벤트</h1>
+    <div id="box"></div>
+</body>
+</html>
