@@ -28,12 +28,17 @@
             var check = document.querySelectorAll(".check");
             for(var i = 0; i < check.length; i++) {
                 //check[i].onclick = gray;
-                check[i].addEventListener("click", function() {
-                    this.parentNode.style.color = "#ccc";
-                    this.style.color = "#ccc";
-                    this.style.cursor = "default";
-                });
+                check[i].addEventListener("click", job);
             }
+            function job() {
+                this.parentNode.style.color = "#ccc";
+                this.style.color = "#ccc";
+                this.style.cursor = "default";
+                alert("임무완료!");
+                this.removeEventListener("click",job); // 이벤트 제거
+            }
+
+
             //색이 그레이로 변환하게하는 함수
             /*function gray() {
                 this.parentNode.style.color = "#ccc";
