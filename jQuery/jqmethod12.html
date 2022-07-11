@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+       $(function() {
+        // $(".list2").css("border", "2px solid red");
+        $(".list2").parent().css("border", "2px solid red"); // .list2의 부모(ul)에 css스타일을 설정해달라는 말
+        /* $("#box1 > section").css({
+            backgroundColor : "yellow",
+            border : "1px solid #f00"
+        }); */
+        /*({
+            backgroundColor : "yellow",
+            border : "1px solid #f00"
+        });*/
+        // $(".list2").next().css("border", "2px solid red");
+        // $(".list2").prev().css("border", "2px solid red");
+        $(".list2").nextAll().css("border", "2px solid red");
+
+       });
+    </script>
+</head>
+<body>
+    <div id="box1">
+        <h1>메서드 형태 선택자</h1>
+        <ul>
+            <li>리스트1</li>
+            <li class="list2">리스트2</li>
+            <li>리스트3</li>
+            <li>리스트4</li>
+        </ul>
+        <p>나는 단락</p>
+        <section>
+            <h2>나는 섹션 제목</h2>
+            <p>나는 섹션 내용</p>
+        </section>
+    </div>
+</body>
+</html>
+
+<!--  ${선택자}.first() << 메서드 선택자
+        $("h1:first")  << 필터 선택자 -->

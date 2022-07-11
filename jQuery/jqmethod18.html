@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체이동</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+       $(function() {
+        $("#imgs > img").css("width", 250);
+        //setInterval(함수,밀리초);
+        setInterval(function() {
+            $("#imgs > img").first().appendTo("#imgs");    
+        },2000);  // 2초마다 맨 앞의 사진이 맨뒤로 이동됨
+     // $("#imgs > img").first().appendTo("#imgs");  // 코알라가 젤리피쉬 뒤로 가짐
+       });
+    </script>
+</head>
+<body>
+    <h1>문서 객체 이동</h1>
+    <div id="imgs">
+        <img src="images/Koala.jpg" alt="">
+        <img src="images/Tulips.jpg" alt="">
+        <img src="images/Desert.jpg" alt="">
+        <img src="images/Penguins.jpg" alt="">
+        <img src="images/Jellyfish.jpg" alt="">
+    </div>
+</body>
+</html>

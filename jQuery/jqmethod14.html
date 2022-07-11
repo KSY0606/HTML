@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        h1 {
+            cursor: pointer;
+        }
+    </style>
+    <script>
+       $(function() {
+        var title = ["장마비가 옵니다.", "오늘은 월요일입니다.", "12369명입니다."]
+        var index;
+        $("h1").click(function () {
+            index = $(this).index();
+            //$(this).html(title[index]);
+            $(this).html($(this).html() + title[index]);
+            $(this).css("cursor", "default");
+        });
+        $("h2").html(function(index, html) {
+            return "★" + html + "★";
+        });
+       });
+    </script>
+</head>
+<body>
+    <h1>오늘의 날씨는?</h1>
+    <h1>오늘은 무슨 요일?</h1>
+    <h1>오늘의 코로나 확진자수는?</h1>
+    <h2>우리반 모두 파이팅</h2>
+    <h2>풀스택반 파이팅</h2>
+</body>
+</html>

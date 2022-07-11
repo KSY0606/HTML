@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체이동</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+       $(function() {
+        $("div").append($("h1").clone()); // h1이 복제되어 div안으로도 들어가짐.
+       });
+    </script>
+</head>
+<body>
+    <h1>문서 객체 복제</h1>
+    <hr>
+    <div>
+        
+    </div>
+    <hr>
+</body>
+</html>
