@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        #canvas {
+            border: 3px solid black;
+            margin-top: 10px;
+        }
+        .clear {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+    <script>
+        $(function() {
+           var can = document.getElementById("canvas");
+           var context = can.getContext("2d");
+           var position, x, y;
+           var sw = false;
+           var color = "#000", oldColor;
+           var clearSw = false;
+           var lineWidth = 1, oldLineWidth;
+
+           $(".colorChange").on("change", function() {
+                color = $(this).val();
+           });
+           $("select").change(function() {
+                lineWidth = $("select > option:selected").val();
+           });
+           $("button").click(function() {
+                can.width = can.width;
+           });
+           $(".clear").click(function() {
+                clearSw = !clearSw;
+                if(clearSw) {
+                    $(this).css("border", "3px solid black");
+                    $(this).html("&check;");
+                    // 컬러가 흰색, 두께 20, 도화지 마우스(pointer)
+                    oldColor = color;
+                    color = "#fff";
+                    oldLineWidth = context.lineWidth;
+                    lineWidth = 20;
+                    $(can).css("cursor", "pointer");
+                }else {
+                    $(this).css("border", "1px solid #ccc");
+                    $(this).html("");
+                    // 컬러는 원래 색, 원래 두께, 도화지마우스(default)
+                    color = oldColor;
+                    lineWidth = oldLineWidth;
+                    $(can).css("cursor", "default");
+                }
+           });
+           $(can).on({
+            mousedown : function(event) {
+                // console.log("도화지 위에서 마우스를 눌렀습니다.");
+                sw = true;
+                position = $(this).offset();
+                x = event.pageX-position.left;
+                y = event.pageY-position.top;
+                context.beginPath();
+                context.moveTo(x,y);
+            },
+            mousemove : function(event) {
+                // console.log("도화지 위에서 돌아다니고 있습니다.");
+                if(sw == true) {
+                    position = $(this).offset();
+                    x = event.pageX-position.left;
+                    y = event.pageY-position.top;
+                    context.lineWidth = lineWidth;
+                    context.strokeStyle = color;
+                    context.lineTo(x,y);
+                    context.stroke();
+                }
+            },
+            mouseup : function(event) {
+                // console.log("도화지 위에서 마우스를 뗐습니다.");
+                sw = false;
+            }
+           });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <span>붓의 두께</span>
+        <select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+        </select>
+        <input type="color" class="colorChange">
+        <button>새도화지</button>
+        <div class="clear" title="지우개"></div>
+    </div>
+    <canvas id="canvas" width="800" height="500"></canvas>
+</body>
+</html>

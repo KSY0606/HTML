@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            // one메서드 - 이벤트를 한번만 연결
+            var count = 0;
+           $("h1").on('click', function() {  // one 은 이벤트를 1번만 연결함
+                count++;
+                alert("이벤트 발생!");
+
+            if(count == 3) {
+                $(this).html("이벤트 발생 완료");
+                $(this).off();
+                }
+           });
+        });
+    </script>
+</head>
+<body>
+    <h1>이벤트1</h1>
+    <h1>이벤트2</h1>
+    <h1>이벤트3</h1>
+</body>
+</html>
