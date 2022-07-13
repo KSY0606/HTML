@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+          /*  $("h1").on("click", function() {    // on은 이벤트를 연결
+            var len = $("h1").length;
+            var targetHTML = $(this).html();  // html() 괄호 안이 비어있으면 클릭된 글자를 저장함
+            $("#wrap").append("<h1>" + len + " - " + targetHTML + "</h1>");
+        });  */
+        $("#wrap").on("click", "h1", function() {    // $(선택자).on(이벤트이름, 선택자, 함수);
+            var len = $("h1").length;
+            var targetHTML = $(this).html();
+            $("#wrap").append("<h1>" + len + " - " + targetHTML + "</h1>");
+        });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>객체생성</h1>
+    </div>
+</body>
+</html>

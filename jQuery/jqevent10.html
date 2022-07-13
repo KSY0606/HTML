@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+           /* $(window).resize(function() {
+                alert("창의 크기 변경했니?");
+            }); */
+
+            // 무한스크롤
+            for(var i = 0; i < 25; i++) {
+                $("<h1>무한 스크롤 체험</h1>").appendTo("body");
+            }
+            $(window).scroll(function() {
+                var scrollHeight = $(window).scrollTop() + $(window).height();
+                var documentHeight = $(document).height();
+                if(scrollHeight >= documentHeight-200) {
+                    for(var i = 0; i < 25; i++) {
+                        $("<h1>무한 스크롤 체험</h1>").appendTo("body");
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>윈도 이벤트</h1>
+</body>
+</html>

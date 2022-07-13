@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        .outer {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            padding: 50px;
+            margin: 10px;
+        }
+        .inner {
+            width: 100%;
+            height: 100%;
+            background-color: red;
+        }
+    </style>
+    <script>
+        $(function() {
+            // $("h1").on("dblclick", function() {  // 더블클릭
+            // $("h1").on("mousedown", function() {  // 마우스를 누르면 실행, = 누르고 떼지 않아도 실행됨
+            // $("h1").on("mouseup", function() {  // 마우스를 눌렀다가 뗴는 순간 실행
+                $(".outer").mouseover(function() {
+                    $("body").append("<p>마우스 오버수행</p>");
+                }).mouseenter(function() {
+                    $("body").append("<p>마우스 엔터수행</p>");
+                });
+        });
+    </script>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+
+        </div>
+    </div>
+</body>
+</html>
