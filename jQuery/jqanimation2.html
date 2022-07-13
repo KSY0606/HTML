@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        .image {
+            display: none;
+        }
+    </style>
+    <style>
+        .news {
+            display: none;
+        }
+    </style>
+    <script>
+        $(function() {
+            $("button").click(function() {
+                $(".image").show("fast");      // $(선택자).show(); 
+            });                         // $(선택자).show(speed);     ()안에 fast,normal,slow,숫자 입력, 숫자 입력시 1000 = 1초임
+        });
+    </script>
+</head>
+<body>
+    <button>이미지보기</button>
+    <div class="image">
+        <img src="images/car_green.jpg" alt="">
+    </div>
+</body>
+</html>

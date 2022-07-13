@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        .news {
+          /* display: none; */
+        }
+    </style>
+    <script>
+        $(function() {
+            $("button").click(function() {
+             // $(".news").slideDown(1000);  // 말려져있다가 내려옴 
+             //   $(".news").slideUp(1000);    // 말려지면서 올라감
+             /*   $(".news > div").slideUp(2000, function() {
+                    $(".news").append("<h2>다음 뉴스는 9시에...</h2>");
+                }); */
+                $(".news").slideToggle(1000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>뉴스보이기</button>
+    <div class="news">
+        <div>
+            <h1>재방송 같았던 4연속 역전패, FA 딱 1명만 영입했더라면…</h1>
+            <p>한화는 12일 사직 롯데전에서 또 한 번의 역전패를 당했다. 선발 장민재가 5⅓이닝 3피안타 2볼넷 1탈삼진 1실점(비자책) 역투를 펼치며 6회까지 2-1 리드를 잡았다.</p>
+            <p>그러나 7회 투입된 윤대경이 안중열에게 불의의 일격을 맞았다. 동점 솔로 홈런을 허용하며 2-2 동점. 이어 8회 강재민이 정훈에게 결승타를 맞고 또 한 번의 역전패를 당했다.</p>
+        </div>
+    </div>
+</body>
+</html>
