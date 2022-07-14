@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        .images {
+            display: none;
+        }
+    </style>
+    <script>
+        $(function() {
+            $("button").click(function() {
+                $(".images").fadeToggle(3000); // 문서 객체를 선명하게 보여줌
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>이미지토글</button>
+    <div class="images">
+        <h1>오늘의 뉴스</h1>
+        <p>오미크론의 하위 변이인 BA.5(비에이오바이러스가 각국의 우세종으로 자리 잡아가자 세계보건기구, WHO가 느슨해진 방역 태세에 경고 메세지를 냈습니다.</p>
+        <img src="images/car_green.jpg" alt="">
+    </div>
+</body>
+</html>
