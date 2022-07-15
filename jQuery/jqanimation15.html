@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <style>
+        div {
+            background-color: orange;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: relative;
+            left: 200px;
+            top: 500px;
+        }
+        img {
+            position: relative;
+            width: 300px;
+        }
+    </style>
+    <script>
+        $(function() {
+            $("img").click(function() {
+                $(this).animate({
+                    left : 1000
+                }, 3000,"easeOutElastic").animate({
+                    left : 0
+                }, 3000,"easeOutElastic");
+            });
+            $("div").click(function() {
+                $(this).animate({
+                    top : 0
+                },2000,"easeInBounce");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div></div>
+    <img src="images/car_red.jpg" alt="">
+</body>
+</html>
