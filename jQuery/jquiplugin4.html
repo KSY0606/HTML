@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI플로그인</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <style>     /* 마크업에 class들은 jquery-ui.min.css안에서 지정된 class */
+        #box {      /* ui를 사용하고 따로 css 설정 가능 */
+            padding: 5px;
+        }
+        #box h1 {
+            text-align: center;
+            font-size: 1.5em;
+            padding: 5px;
+            margin: 0;
+        }
+    </style>
+    <script>
+        $(function() {
+            $("#box").hover(function() {
+                $(this).addClass("ui-state-hover");
+            }, function() {
+                $(this).removeClass("ui-state-hover");
+            })
+        });
+    </script>
+</head>
+<body>
+    <div id="box" class="ui-widget-content ui-corner-all">
+        <h1 class="ui-widget-header"><span class="ui-icon ui-icon-heart"></span>스마트폰 앱으로 1시간 만에 코로나 진단…100% 민감도</h1>
+        <p>스마트폰 앱을 이용해 현장에서 1시간 만에 PCR 수준으로 코로나19 감염 여부를 진단할 수 있는 바이오센서가 나왔다.</p>
+    </div>
+</body>
+</html>
