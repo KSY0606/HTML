@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI플로그인</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <style>
+        #tabs {
+            width: 500px;
+        }
+    </style>
+    <script>
+        $(function() {
+            $("#tabs").tabs({
+                event : "mouseover"
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="tabs">
+        <ul>
+            <li><a href="#news-1">경제뉴스</a></li>
+            <li><a href="#news-2">사회뉴스</a></li>
+            <li><a href="#news-3">스포츠뉴스</a></li>
+        </ul>
+        <div id="news-1">
+            <p>코로나 이후 대기업 고령화 심화…</p>
+            <p>코로나 이후 주요 대기업들의 청년 신규 채용이 감소했다는 분석 결과가 나왔다.</p>
+        </div>
+        <div id="news-2">
+            <p>코로나 ‘재감염’ 확진자, 한주새 2배 늘었다</p>
+            <p>신종 코로나바이러스 감염증(코로나19)에 걸린 후 다시 감염되는 사례가 늘어나고 있어 우려가 커지고 있다.</p>
+        </div>
+        <div id="news-3">
+            <p>김민재, 나폴리 '이적 합의 완료'</p>
+            <p>김민재(페네르바체)가 나폴리와 급물살을 타고 있다. 숱한 굵직한 팀과 연결됐지만, 최종 행선지는 나폴리로 보인다.</p>
+        </div>
+    </div>
+</body>
+</html>
