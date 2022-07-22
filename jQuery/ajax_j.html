@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        window.onload = function() {                // jQuery없이 html로 ajax 활용
+            var request = new XMLHttpRequest();
+            request.open("GET", "head.html", true);  // true - 비동기식   false - 동기식
+            var preDate = new Date();
+            request.send();
+            var nowDate = new Date();
+            alert(nowDate-preDate);
+            document.body.innerHTML += request.responseText;
+        }
+    </script>
+</head>
+<body>
+    <div id="content">
+        <h2>여기는 본문</h2>
+    </div>
+</body>
+</html>
