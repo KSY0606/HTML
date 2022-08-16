@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #fff;
+        }
+        a {
+            text-decoration: none;
+        }
+        nav a:link, a:visited {
+            color: #fff;
+        }
+        nav a:active {
+            color: yellow;
+        }
+        h1 {
+            font-size: 1.8em;
+        }
+        h2 {
+            font-size: 1.3em;
+        }
+        p {
+            font-size: 1.3em;
+            line-height: 2.5;
+        }
+        li {
+            font-size: 1em;
+            line-height: 2;
+        }
+        #container {
+            width: 100%;
+        }
+        header {
+            width: 100%;
+            height: 300px;
+            background: url(images/Hydrangeas.jpg) center no-repeat;
+            background-size: cover;
+        }
+        nav {
+            height: 50px;
+            background-color: black;
+        }
+        #main-nav {
+            list-style: none;
+            padding: 10px;
+        }
+        #main-nav li {
+            display: inline-block;
+            color: white;
+            font-size: 0.8em;
+            margin: 5px 15px;
+        }
+        .photo {
+            text-align: center;
+            width: 100%;
+            padding: 10px;
+        }
+        .photo img {
+            width: 100%;
+        }
+        .ice {
+            border: 1px solid white;
+            border-radius: 50%;
+        }
+        footer {
+            background-color: black;
+        }
+        footer p {
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <nav>
+                <ul id="main-nav">
+                    <li><a href="#intro">영화</a></li>
+                    <li><a href="#choice">예매</a></li>
+                    <li><a href="#map">이벤트</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="intro">
+            <div class="page-title">
+                <h1>영화</h1>
+            </div>
+            <div class="content">
+                <div class="photo">
+                    <img src="images/movieChart2.jpg" alt="영화">
+                </div>
+                <div class="text">
+                    <p>영업 시간 : 오전 7시 ~ 밤 11시</p>
+                    <p>휴무 : 매주 월요일<i><small>월요일이 공휴일일 경우 영업함</small></i></p>
+                </div>
+            </div>
+        </section>
+        <section id="map">
+            <div class="page-title">
+                <h1>이벤트</h1>
+            </div>
+            <div class="content">
+                <div class="photo">
+                    <img src="images/eventPoster1.jpg" alt="이벤트">
+                </div>
+                <div class="text">
+                    <p>서귀포시 안덕면  사계리 ㅇㅇㅇㅇ-ㅇㅇㅇ</p>
+                    <p>제주 올레 10코스 산방산 근처</p>
+                </div>
+            </div>
+        </section>
+        <section id="choice">
+            <div class="page-title">
+                <h1>이 달의 추천</h1>
+            </div>
+            <div class="content">
+                <div class="photo">
+                    <img class="ice" src="images/movieChart4.jpg" alt="추천영화">
+                </div>
+                <div class="text">
+                    <h2>영화 예매 방법</h2>
+                    <ol>
+                        <li>보고싶은 영화를 선택하여 예매하기 버튼을 누른다</li>
+                        <li>인원을 체크하고 날짜, 시간 확인 후 결제한다</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>My times with movie</p>
+        </footer>
+    </div>
+</body>
+</html>

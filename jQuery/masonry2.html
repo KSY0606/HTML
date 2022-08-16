@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #525252;
+        }
+        .item {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            background-color: white;
+            border-radius: 10px;
+            float: left;
+        }
+        .big {width: 210px; height: 430px;}
+        .normal {width: 210px; height: 210px;}
+        .small {width: 100px; height: 100px;}
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>   <!-- 플러그인 사용 -->
+    <script>
+        $(function () {
+            $("#masonry-container").masonry({
+                itemSelector : ".item",
+                columnWidth : 110,
+                isAnimated : true
+            });
+            $(document).on("click", ".item", function(event) {
+                if(event.shiftKey) {   // 쉬프트 키를 누르면서 클릭할 경우
+                    $("#masonry-container").masonry("remove", $(this));
+                    $("#masonry-container").masonry("layout");
+                }else {  // 그냥 클릭했을 경우
+                    let item = $(this).clone();           // class item과는 다른 변수 item에 this(document에서 클릭되는 애)를 복사
+                    $("#masonry-container").append(item);  // 클릭한 이미지가 #masonry-container뒤에 추가됨
+                    $("#masonry-container").masonry("addItems", item);
+                    $("#masonry-container").masonry("layout");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="masonry-container">
+        <img class="item small" src="images/Desert.jpg">
+        <img class="item big" src="images/Koala.jpg">
+        <img class="item normal" src="images/Penguins.jpg">
+        <img class="item small" src="images/Lighthouse.jpg">
+        <img class="item small" src="images/Hydrangeas.jpg">
+        <img class="item small" src="images/Tulips.jpg">
+        <img class="item normal" src="images/coffee-blue.jpg">
+        <img class="item normal" src="images/girl.jpg">
+        <img class="item small" src="images/bg4.jpg">
+        <img class="item small" src="images/umbrella.jpg">
+        <img class="item small" src="images/Chrysanthemum.jpg">
+    </div>
+</body>
+</html>
