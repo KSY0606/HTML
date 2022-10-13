@@ -1,0 +1,157 @@
+@charset "utf-8";
+/* header  footer 공통 css */
+
+/* 초기화 */
+html, body, div, header, footer, nav, ul, li, section, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+ul, li {
+    list-style: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+/* 링크 스타일 */
+a:hover, a:focus {
+    color: #f25b1e;
+    text-decoration: none;
+}
+/* 기본 스타일 */
+body {
+    color: black;
+    background-color: white;
+    font-size: 1em; /* 12px */
+}
+/* 전체 레이아웃  */
+#top-menus-area, header, #main-image, .sub-back, #room-intro, #dining-intro, #offers-area, footer {
+    width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* 상단 메뉴바 시작 */
+#top-menus-area {
+    width: 1200px;
+    height: 80px;
+    background-color: red;
+}
+.top-logo {
+    width: 680px;
+    height: 80px;
+    background-color: green;
+    float: left;
+}
+.logo {
+    width: 140px;
+    height: 80px;
+    background-color: blue;
+    float: right;
+}
+/* h1, a img 추가해야 할수도 ! */
+.top-menu {
+    width: 520px;
+    height: 80px;
+    float: right;
+    background-color: yellow;
+}
+.menu {
+    position: relative;
+    display:flex;
+    flex-flow: row nowrap;
+    padding: 5px;
+    background-color: green;
+}
+.top-menus {
+    position: absolute;
+    right: 0;
+    width: 300px;
+    height: 35px;
+    display: flex;
+    background-color: red;
+}
+.top-menus > li {
+    flex: auto;
+    height: 35px;
+    text-align: center;
+    font-size: 0.75em;
+    line-height: 30px;
+    letter-spacing: 1.5px;
+    background-color: blue;
+}
+.top-menus > li::after {
+    content: "|";
+  float: right;
+  display: block;
+}
+.top-menus > li:last-child::after {
+    content: "";
+}
+.top-menus > li > a {
+    padding: 0 13px;
+    background-color: orange;
+}
+
+/* 메인 메뉴바 시작 */
+header {
+    height: 53px;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    background-color: brown;
+}
+nav {
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    background-color: #F15F5F;
+}
+.main-menu {
+    display: flex;
+}
+.main-menu > li > a {
+    box-sizing: border-box;
+    height: 53px;
+    border-bottom: 2px solid white;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 0 40px;
+    white-space: nowrap;
+}
+.main-menu > li:last-child > a {
+    color: red;  /* 메뉴 예약버튼 */
+}
+.main-menu > li:hover > a {
+    border-bottom: 2px solid #111;  /* 메뉴 호버시 밑줄*/
+}
+.sub-menu {
+    display: none;
+    text-align: center;
+    padding-top: 26px;
+    background-color: crimson;
+}
+.sub-menu li {
+    line-height: 26px;
+    padding: 3px 0;
+    background-color: aqua;
+}
+.sub-menu li a {  /* 서브메뉴 */
+    font-size: 0.8em;
+    color: black;
+    letter-spacing: 0.5px;
+}
+.sub-back{
+    height: 0;
+    background-color: blue;
+    left: 160px;
+    z-index: 1;
+}
+
+/* 푸터 영역 시작 */
+
+/* 푸터하기 전  서브메뉴 호버시 색변환 넣어줄것. */
