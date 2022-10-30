@@ -8,7 +8,7 @@
     <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=vpmokfr7vh"></script>
 </head>
 <body>
-<div id="map" style="width:100%;height:400px;"></div>
+<div id="map" style="width:100%;height:700px;"></div>
 
 <script>
     // 16라인  잠실 롯데월드 위치 지도
@@ -24,10 +24,12 @@
                 position: new naver.maps.LatLng(37.5112, 127.0981),
                 map: map
     });
-
+    var marker = new naver.maps.Marker({
+                position: new naver.maps.LatLng(37.5129, 127.0981),
+                map: map
+                
+    });
 </script>
-<div>
-    아아아테스트중
-</div>
+
 </body>
 </html>
