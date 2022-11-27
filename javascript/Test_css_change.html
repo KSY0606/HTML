@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM을 이벤트 처리하기</title>
+    <!-- <script src="js/jquery-3.6.0.min.js"></script> -->
+    <style>
+        #head1 {
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+
+            var f = document.getElementsByClassName("a")[0];
+            var s = document.getElementsByClassName("a")[1];
+                f.onclick = function() {
+                    this.style.fontWeight = "bold";
+                    s.style.fontWeight = "normal";
+                }
+
+                s.onclick = function() {
+                    this.style.fontWeight = "bold";
+                    f.style.fontWeight = "normal";
+                }
+        }  
+    </script>
+</head>
+<body>
+    <h1 id="header">나를 클릭해보세요</h1>
+    <!--
+    <img src="images/girl.png" alt="" onclick="changePic();" id="pic">
+    -->
+    <img src="images/girl.png" alt="" id="pic">
+    <p id="head1" class="a">나는 스타일이 변경됨</p>
+    <p id="head2" class="a">나는 스타일이 변경됨</p>
+</body>
+</html>
