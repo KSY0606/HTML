@@ -1,0 +1,37 @@
+<!DOCTYPE html>   <!--   event.html에서 수정중 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM을 이벤트 처리하기</title>
+    <style>
+        .con {
+            margin: 0 auto;
+            border: 3px solid red;
+            width: 300px;
+        }
+
+        .a {
+            padding: 30px;
+            text-align: center;
+            border: 5px solid green;
+        }
+    </style>
+    <script>
+        $(document).on('click', '.a', function(e){
+    e.preventDefault();  
+  $(this).css('background-color', 'gold');
+   $('.a').not($(this)).css('background-color', '#fff');
+})
+    </script>
+</head>
+<body>
+    <div class="con">
+        <div class="a">일번</div>
+        <div class="a">이번</div>
+        <div class="a">삼번</div>
+        <div class="a">사번</div>
+      </div>
+</body>
+</html>
